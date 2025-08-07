@@ -1,0 +1,71 @@
+.page-container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #c0d6f0;
+    color: rgba(1, 68, 78, 0.9);
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.page-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.page-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.page-container label {
+    display: flex;
+    flex-direction: column;
+    font-weight: 600;
+}
+
+.page-container input,
+.page-container select {
+    margin-top: 6px;
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1rem;
+}
+
+.page-container button {
+    background-color: #00b894;
+    border: none;
+    padding: 12px;
+    color: white;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.page-container button:hover {
+    background-color: #019270;
+}
+
+.filtros {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.lista-operacoes {
+    list-style: none;
+    padding-left: 0;
+}
+
+.lista-operacoes li {
+    background-color: rgba(255, 255, 255, 0.1);
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 6px;
+}

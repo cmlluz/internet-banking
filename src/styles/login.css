@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(#01444ef5,
+            #01444ef0),
+        url('../assets/imagee.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #c0d6f0;
+}
+
+.login-form-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.login-form {
+    background-color: white;
+    padding: 40px 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 450px;
+}
+
+.login-form h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #01444ef0;
+    font-weight: 600;
+    font-size: 2rem;
+}
+
+.login-form h2 {
+    line-height: 40px;
+    margin-bottom: 5px;
+    font-size: 30px;
+    font-weight: 580;
+    color: #01444ef0;
+    text-align: center;
+}
+
+.login-form form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.login-form input {
+    outline: none;
+    font-size: 16px;
+    color: #333;
+    padding: 14px 20px;
+    width: 100%;
+    border-radius: 8px;
+    border: none;
+    background: #dcddddf5;
+    transition: 0.3s ease;
+}
+
+.login-form input:focus {
+    background: #f1f1f1;
+}
+
+.btn,
+button {
+    background-color: #01444ef0;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.btn:hover,
+button:hover {
+    opacity: 0.9;
+    transition: 0.3s ease;
+}
+
+p {
+    color: #666;
+    font-size: 15px;
+    line-height: 25px;
+    text-align: center;
+    opacity: 0.8;
+}
+
+p.account {
+    margin-top: 10px;
+}
+
+p.account a {
+    color: #01444ef0;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+p.account a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    max-width: 580px;
+    margin: 0 auto;
+}
