@@ -1,12 +1,36 @@
 import React, { useState } from "react";
 import '../styles/cadastro.css';
+import api from "../api/api";
 
 function Cadastro() {
     const [mensagem, setMensagem] = useState("");
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        setMensagem("Cadastro realizado com sucesso!");
+       
+        const token = localStorage.getItem("token");
+   
+        const name = document.getElementById('nome').value;
+        const cpf = document.getElementById('cpf').value;
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('senha').value;
+       
+        try {
+            // Enviando a requisição POST
+            const response = await api.post('/users', {
+                name,
+                cpf,
+                email,
+                password
+            });
+
+            // Exibindo mensagem de sucesso
+            setMensagem("Cadastro realizado com sucesso!");
+        } catch (error) {
+            // Tratando erros
+            setMensagem("Erro ao realizar cadastro. Tente novamente.");
+            console.error(error);
+        }
     };
 
     return (

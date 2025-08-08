@@ -5,10 +5,28 @@ import { useNavigate, Link } from 'react-router-dom';
 const Login = () => {
     const navigate = useNavigate();
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log('Formulário enviado');
-        navigate('/home');
+       
+        const token = localStorage.getItem("token");
+   
+        const login = document.getElementById('CPF').value;
+        const password = document.getElementById('Senha').value;
+       
+        try {
+            // Enviando a requisição POST
+            const response = await api.post('/login', {
+                login,
+                password
+            });
+
+            // Exibindo mensagem de sucesso
+            setMensagem("Login realizado com sucesso!");
+        } catch (error) {
+            // Tratando erros
+            setMensagem("Erro ao realizar login. Tente novamente.");
+            console.error(error);
+        }
     };
 
     return (

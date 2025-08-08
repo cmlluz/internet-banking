@@ -4,14 +4,16 @@ import React, { useState } from 'react';
 export default function Deposito() {
     const [conta, setConta] = useState('');
     const [valor, setValor] = useState('');
+    const [descricao, setDescricao] = useState('');
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         const valorNum = parseFloat(valor);
         if (valorNum <= 0) {
             alert('Valor deve ser maior que zero.');
             return;
         }
+        
         alert(`Depósito de R$${valorNum.toFixed(2)} na conta ${conta} realizado com sucesso!`);
         setConta('');
         setValor('');
